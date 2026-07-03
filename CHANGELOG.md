@@ -38,6 +38,7 @@
 - Gave Bedrockium Ingots a recipe
 - The distance between chunks chosen for new Last Millennium locations is now configurable
 	- Defaults to 1024 chunks, was previously 16
+- Having the Oily potion will increase incoming fire damage by a configurable amount, defaulting to 20%
 
 ### Fixed
 

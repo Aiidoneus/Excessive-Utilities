@@ -28,6 +28,7 @@ class ServerConfig(
 	lateinit var funnyEnderLilyTeleporting: ModConfigSpec.BooleanValue
 	lateinit var enderPorcupineMarchTime: ModConfigSpec.IntValue
 	lateinit var tlmChunkDistance: ModConfigSpec.IntValue
+	lateinit var oilyFireDamageFactor: ModConfigSpec.DoubleValue
 
 	lateinit var heatingCoilBurnTime: ModConfigSpec.IntValue
 	lateinit var heatingCoilBurnCost: ModConfigSpec.IntValue
@@ -464,6 +465,10 @@ class ServerConfig(
 			tlmChunkDistance = builder
 				.comment("How many chunks are between each player's \"home location\" in The Last Millennium")
 				.defineInRange("tlmChunkDistance", 1024, 2, 100)
+
+			oilyFireDamageFactor = builder
+				.comment("How much to multiply incoming fire damage when you have the Oily potion applied")
+				.defineInRange("oilyFireDamageFactor", 1.2, 0.0, Double.MAX_VALUE)
 
 			builder.section("healing_axe") {
 				healingAxeChancePerTick = builder

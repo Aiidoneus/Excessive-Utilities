@@ -16,6 +16,7 @@ import dev.aaronhowser.mods.excessive_utilities.datagen.tag.ModItemTagsProvider
 import dev.aaronhowser.mods.excessive_utilities.datamap.InversionRitualEnemyWeight
 import dev.aaronhowser.mods.excessive_utilities.datamap.NetherLavaDunkConversion
 import dev.aaronhowser.mods.excessive_utilities.datamap.ReversingHoeConversion
+import dev.aaronhowser.mods.excessive_utilities.effect.OilyEffect
 import dev.aaronhowser.mods.excessive_utilities.effect.SecondChanceEffect
 import dev.aaronhowser.mods.excessive_utilities.entity.FlatTransferNodeEntity
 import dev.aaronhowser.mods.excessive_utilities.handler.CurseHandler
@@ -386,6 +387,7 @@ object CommonEvents {
 	fun onIncomingDamage(event: LivingIncomingDamageEvent) {
 		SecondChanceEffect.cancelDeath(event)
 		SoulRendHandler.handleIncomingDamage(event)
+		OilyEffect.handleIncomingDamage(event)
 	}
 
 	@SubscribeEvent
