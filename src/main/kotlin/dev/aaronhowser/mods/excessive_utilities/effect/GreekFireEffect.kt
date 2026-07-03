@@ -14,7 +14,10 @@ class GreekFireEffect : MobEffect(
 	}
 
 	override fun applyEffectTick(livingEntity: LivingEntity, amplifier: Int): Boolean {
-		livingEntity.remainingFireTicks = 5
+		if (livingEntity.remainingFireTicks == 0) {
+			livingEntity.remainingFireTicks = 15
+		}
+
 		return true
 	}
 
