@@ -21,6 +21,3 @@ build
 # other
 eclipse
 runs/*
-
-# license
-/src/main/resources/assets/excessive_utilities/textures/item/kikoku.png
