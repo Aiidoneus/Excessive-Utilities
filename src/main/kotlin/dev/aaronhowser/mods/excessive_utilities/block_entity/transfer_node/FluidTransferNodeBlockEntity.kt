@@ -120,7 +120,7 @@ class FluidTransferNodeBlockEntity(
 			val amountInserted = handler.fill(fluidInBuffer, IFluidHandler.FluidAction.EXECUTE)
 			if (amountInserted <= 0) continue
 
-			if (hasCreativeUpgrade()) {
+			if (!hasCreativeUpgrade()) {
 				bufferTank.drain(amountInserted, IFluidHandler.FluidAction.EXECUTE)
 			}
 
